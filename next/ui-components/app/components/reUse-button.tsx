@@ -13,6 +13,7 @@ type RUButtonProps = {
 type RUPresetProps = {
     customStyle?: string
     disabled?: boolean
+    icon?: boolean
 }
 
 const changeCase = (str: string) => {
@@ -44,14 +45,15 @@ function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
                         `}
             disabled={disabled}
         >
-            {filteredTitle}<span className='ml-2'>{icon}</span>
+            {filteredTitle}{icon !== undefined ? <span className='ml-2'>{icon}</span> : ''}
+            
         </button>
     )
 }
 
 export default ReUseButton
 
-function ReUseCancel({ customStyle, disabled }: RUPresetProps) {
+function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
     return (
         <button
             role={`cancel button`}
@@ -70,12 +72,12 @@ function ReUseCancel({ customStyle, disabled }: RUPresetProps) {
                         `}
             disabled={disabled}
         >
-            CANCEL<span className='ml-1 text-2xl'><MdCancel /></span>
+            CANCEL{icon === true ? <span className='ml-1 text-2xl'><MdCancel /></span> : ''}
         </button>
     )
 }
 
-function ReUseSave({ customStyle, disabled }: RUPresetProps) {
+function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
     return (
         <button
             role={`save button`}
@@ -94,7 +96,7 @@ function ReUseSave({ customStyle, disabled }: RUPresetProps) {
                         `}
             disabled={disabled}
         >
-            SAVE<span className='ml-2'><FaRegSave /></span>
+            SAVE{icon === true ? <span className='ml-2'><FaRegSave /></span> : ''}
         </button>
     )
 }
