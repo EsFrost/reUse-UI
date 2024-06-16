@@ -1,16 +1,28 @@
+'use client'
 import ReUseButton, { ReUseCancel, ReUseSave } from "./components/reUse-button"
 import { FaCheck } from "react-icons/fa"
+import ReUseTextField from "./components/reUse-texeField"
 
+const logData = (data: string | null) => {
+  console.log(data)
+}
 
 export default function Home() {
   return (
-    <div className="flex justify-center mt-7">
-      <ReUseButton title='Action' icon={<FaCheck />} />      
-      <ReUseCancel icon={true} />
-      <ReUseSave icon={true} />
+    <>
+      <div className="flex justify-center mt-7 w-full">
+        <ReUseButton title='Action' icon={<FaCheck />} />      
+        <ReUseCancel icon={true} />
+        <ReUseSave icon={true} />
 
-      <ReUseCancel />
-      <ReUseSave />
-    </div>
+        <ReUseButton title='Action' />  
+        <ReUseCancel />
+        <ReUseSave />
+      </div>
+
+      <div className="flex justify-center mt-7 w-full">
+      <ReUseTextField getData={logData} title='Text field' />
+      </div>
+    </>
   )
 }
