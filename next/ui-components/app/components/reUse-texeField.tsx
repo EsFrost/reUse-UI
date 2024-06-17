@@ -30,6 +30,8 @@ const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title }) => {
     }
   }
 
+  // in editable text there was a "flex" property that was rendering weirdly in firefox
+  
   return (
     <div className='flex gap-2 items-center relative'>
         <label htmlFor="" className='text-xl mr-2'>{title}: </label>
@@ -37,13 +39,14 @@ const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title }) => {
             id='editable-text'
             contentEditable='true' 
             className='
-                flex items-center rounded border-2 border-gray-200 bg-gray-800 text-white pl-4 pr-[50px] py-2 min-w-[300px] break-all
+                items-center align-middle rounded border-2 border-gray-200 bg-gray-800 text-white pl-4 pr-[50px] py-2 min-w-[300px] break-all
                 ring-[4px] ring-gray-100 dark:ring-gray-600 border-mutedaccent dark:border-white
                 focus-visible:outline-none focus-visible:ring-[4px] focus-visible:ring-gray-100 dark:focus-visible:ring-gray-600
             '
             onKeyDown={handleKeyPress}
         >
         </div>
+        
         <span className='absolute right-3 text-white flex items-center cursor-pointer' onClick={handleSendClick}>
             <span className='mr-2'>|</span>
             <IoMdSend />
