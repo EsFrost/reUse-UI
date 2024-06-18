@@ -101,4 +101,31 @@ function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
     )
 }
 
-export { ReUseCancel, ReUseSave }
+function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps) {
+    const filteredTitle = changeCase(title)
+    return (
+        <button
+            role={`${title} button`}
+            aria-label={title}
+            className={`flex items-center justify-center
+                        min-w-[96px] min-h-[48px] px-4 py-2
+                        text-blue-600 text-lg rounded-md 
+                        mx-[8px] cursor-pointer
+                        bg-white hover:bg-gray-100 active:bg-gray-200
+                        focus:outline-none target:bg-gray-200
+                        disabled:bg-gray-700 disabled:cursor-not-allowed
+                        drop-shadow-md
+                        select-none
+                        transition-all ease-in-out duration-200
+                        border-4 border-blue-600
+                        ${customStyle || ''}
+                        `}
+            disabled={disabled}
+        >
+            {filteredTitle}{icon !== undefined ? <span className='ml-2'>{icon}</span> : ''}
+            
+        </button>
+    )
+}
+
+export { ReUseCancel, ReUseSave, ReUseHighContrast }
