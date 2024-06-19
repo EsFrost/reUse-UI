@@ -5,9 +5,10 @@ import { IoMdSend } from "react-icons/io"
 interface ReUseTextFieldProps {
   getData: (data: string | null) => void
   title: string
+  id: string
 }
 
-const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title }) => {
+const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title, id }) => {
   
   const passData = (data: string | null) => {
     getData(data)
@@ -22,7 +23,7 @@ const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title }) => {
   }
   
   const handleSendClick = () => {
-    const editableElem = document.getElementById('editable-text')
+    const editableElem = document.getElementById(id)
     if (editableElem) {
       const currentText = editableElem.textContent
       passData(currentText??null)
@@ -36,7 +37,7 @@ const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title }) => {
     <div className='flex gap-2 items-center relative'>
         <label htmlFor="" className='text-xl mr-2'>{title}: </label>
         <div
-            id='editable-text'
+            id={id}
             contentEditable='true' 
             className='
                 items-center align-middle rounded border-2 border-gray-200 bg-gray-800 text-white pl-4 pr-[50px] py-2 min-w-[300px] break-all

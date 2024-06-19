@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center mt-7 w-full">
-      <ReUseTextField getData={logData} title='Text field' />
+      <ReUseTextField id='editable-div' getData={logData} title='Text field' />
       </div>
     </>
   )
