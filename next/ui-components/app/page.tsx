@@ -2,14 +2,19 @@
 import ReUseButton, { ReUseCancel, ReUseSave, ReUseHighContrast, ReUseHighContrastCancel, ReUseHighContrastSave } from "./components/reUse-button"
 import { FaCheck } from "react-icons/fa"
 import ReUseTextField from "./components/reUse-texeField"
+import React from "react"
+import ReUseCard from "./components/reUse-card"
+import myImg from './images/reUse-card.jpg'
+
 
 const logData = (data: string | null) => {
   console.log(data)
 }
 
 export default function Home() {
+
   return (
-    <>
+    <>    
       <div className="flex justify-center mt-7 w-full">
 
         <ReUseButton title='Action' icon={<FaCheck />} /> 
@@ -33,6 +38,10 @@ export default function Home() {
 
       <div className="flex justify-center mt-7 w-full">
         <ReUseTextField id='editable-div' getData={logData} title='Text field' />
+      </div>
+
+      <div className="flex justify-center mt-7 w-full">
+        <ReUseCard customImg={myImg}/>
       </div>
     </>
   )

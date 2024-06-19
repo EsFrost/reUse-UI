@@ -143,8 +143,8 @@ function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps
                         min-w-[126px] min-h-[48px] px-4 py-2
                         text-blue-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
-                        bg-white hover:bg-gray-100 active:bg-gray-200
-                        focus:outline-none target:bg-gray-200
+                        bg-white hover:bg-gray-200 active:bg-gray-300
+                        focus:outline-none target:bg-gray-300
                         disabled:bg-gray-700 disabled:cursor-not-allowed
                         drop-shadow-md shadow-md
                         select-none
@@ -177,8 +177,8 @@ function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps)
                         min-w-[126px] min-h-[48px] px-4 py-2
                         text-red-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
-                        bg-white hover:bg-gray-100 active:bg-gray-200
-                        focus:outline-none target:bg-gray-200
+                        bg-white hover:bg-gray-200 active:bg-gray-300
+                        focus:outline-none target:bg-gray-300
                         disabled:bg-gray-700 disabled:cursor-not-allowed
                         drop-shadow-md shadow-md
                         select-none
@@ -221,8 +221,8 @@ function ReUseHighContrastSave({ customStyle, disabled, icon, clickFunc}: RUPres
                         min-w-[126px] min-h-[48px] px-4 py-2
                         text-green-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
-                        bg-white hover:bg-gray-100 active:bg-gray-200
-                        focus:outline-none target:bg-gray-200
+                        bg-white hover:bg-gray-200 active:bg-gray-300
+                        focus:outline-none target:bg-gray-300
                         disabled:bg-gray-700 disabled:cursor-not-allowed
                         drop-shadow-md shadow-md
                         select-none
