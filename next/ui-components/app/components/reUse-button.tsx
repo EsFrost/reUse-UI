@@ -46,7 +46,7 @@ function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
                         bg-blue-600 hover:bg-blue-700 active:bg-blue-800
                         focus:outline-none target:bg-blue-700
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
@@ -81,7 +81,7 @@ function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
                         bg-red-600 hover:bg-red-700 active:bg-red-800
                         focus:outline-none target:bg-red-700
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
@@ -113,7 +113,7 @@ function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
                         bg-green-600 hover:bg-green-700 active:bg-green-800
                         focus:outline-none target:bg-green-700
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
@@ -146,7 +146,7 @@ function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps
                         bg-white hover:bg-gray-100 active:bg-gray-200
                         focus:outline-none target:bg-gray-200
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         border-4 border-blue-600
@@ -180,7 +180,7 @@ function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps)
                         bg-white hover:bg-gray-100 active:bg-gray-200
                         focus:outline-none target:bg-gray-200
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         border-4 border-red-600
@@ -210,6 +210,9 @@ function ReUseHighContrastSave({ customStyle, disabled, icon, clickFunc}: RUPres
         }
     }
 
+    const myVal = 'rgba(128, 255, 255, 0.7)'
+    const myVal2 = 'rgba(128, 255, 255, 0)'
+
     return (
         <button
             role={`save button`}
@@ -221,7 +224,7 @@ function ReUseHighContrastSave({ customStyle, disabled, icon, clickFunc}: RUPres
                         bg-white hover:bg-gray-100 active:bg-gray-200
                         focus:outline-none target:bg-gray-200
                         disabled:bg-gray-700 disabled:cursor-not-allowed
-                        drop-shadow-md
+                        drop-shadow-md shadow-md
                         select-none
                         transition-all ease-in-out duration-200
                         border-4 border-green-600

@@ -28,7 +28,7 @@ export default function Home() {
 
         <ReUseHighContrast title='Action' />
         <ReUseHighContrastCancel />
-        <ReUseHighContrastSave clickFunc={() => console.log('test')} />
+        <ReUseHighContrastSave />
       </div>
 
       <div className="flex justify-center mt-7 w-full">
