@@ -23,7 +23,7 @@ const ReUseTextField: React.FC<ReUseTextFieldProps> = ({ getData, title, id }) =
   }
   
   const handleSendClick = () => {
-    const editableElem = document.getElementById(id)
+    const editableElem = document.querySelector(`#${id}`)
     if (editableElem) {
       const currentText = editableElem.textContent
       passData(currentText??null)
