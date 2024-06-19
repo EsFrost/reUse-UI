@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { MdCancel } from "react-icons/md"
 import { FaRegSave } from "react-icons/fa"
 
@@ -27,6 +27,12 @@ const changeCase = (str: string) => {
 
 function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
     const filteredTitle = changeCase(title)
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
     return (
         <button
             role={`${title} button`}
@@ -42,8 +48,10 @@ function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             {filteredTitle}{icon !== undefined ? <span className='ml-2'>{icon}</span> : ''}
             
@@ -54,6 +62,12 @@ function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
 export default ReUseButton
 
 function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
     return (
         <button
             role={`cancel button`}
@@ -69,8 +83,10 @@ function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             CANCEL{icon === true ? <span className='ml-1 text-2xl'><MdCancel /></span> : ''}
         </button>
@@ -78,6 +94,12 @@ function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
 }
 
 function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
     return (
         <button
             role={`save button`}
@@ -93,8 +115,10 @@ function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
                         select-none
                         transition-all ease-in-out duration-200
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             SAVE{icon === true ? <span className='ml-2'><FaRegSave /></span> : ''}
         </button>
@@ -103,6 +127,12 @@ function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
 
 function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps) {
     const filteredTitle = changeCase(title)
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
     return (
         <button
             role={`${title} button`}
@@ -119,8 +149,10 @@ function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps
                         transition-all ease-in-out duration-200
                         border-4 border-blue-600
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             {filteredTitle}{icon !== undefined ? <span className='ml-2'>{icon}</span> : ''}
             
@@ -129,6 +161,12 @@ function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps
 }
 
 function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps) {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
     return (
         <button
             role={`cancel button`}
@@ -145,15 +183,24 @@ function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps)
                         transition-all ease-in-out duration-200
                         border-4 border-red-600
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             CANCEL{icon === true ? <span className='ml-1 text-2xl'><MdCancel /></span> : ''}
         </button>
     )
 }
 
-function ReUseHighContrastSave({ customStyle, disabled, icon }: RUPresetProps) {
+function ReUseHighContrastSave({ customStyle, disabled, icon}: RUPresetProps) {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 500);
+    }
+
     return (
         <button
             role={`save button`}
@@ -170,8 +217,10 @@ function ReUseHighContrastSave({ customStyle, disabled, icon }: RUPresetProps) {
                         transition-all ease-in-out duration-200
                         border-4 border-green-600
                         ${customStyle || ''}
+                        ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
+            onClick={handleClick}
         >
             SAVE{icon === true ? <span className='ml-2'><FaRegSave /></span> : ''}
         </button>
