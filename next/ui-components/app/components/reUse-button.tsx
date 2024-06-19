@@ -32,7 +32,7 @@ function ReUseButton({ customStyle, title, icon, disabled }: RUButtonProps) {
             role={`${title} button`}
             aria-label={title}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[116px] min-h-[48px] px-4 py-2
                         text-white text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-blue-600 hover:bg-blue-700 active:bg-blue-800
@@ -59,7 +59,7 @@ function ReUseCancel({ customStyle, disabled, icon }: RUPresetProps) {
             role={`cancel button`}
             aria-label={`cancel`}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[116px] min-h-[48px] px-4 py-2
                         text-white text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-red-600 hover:bg-red-700 active:bg-red-800
@@ -83,7 +83,7 @@ function ReUseSave({ customStyle, disabled, icon }: RUPresetProps) {
             role={`save button`}
             aria-label={`save`}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[116px] min-h-[48px] px-4 py-2
                         text-white text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-green-600 hover:bg-green-700 active:bg-green-800
@@ -108,7 +108,7 @@ function ReUseHighContrast({ customStyle, title, icon, disabled }: RUButtonProps
             role={`${title} button`}
             aria-label={title}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[126px] min-h-[48px] px-4 py-2
                         text-blue-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-white hover:bg-gray-100 active:bg-gray-200
@@ -134,7 +134,7 @@ function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps)
             role={`cancel button`}
             aria-label={`cancel`}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[126px] min-h-[48px] px-4 py-2
                         text-red-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-white hover:bg-gray-100 active:bg-gray-200
@@ -159,7 +159,7 @@ function ReUseHighContrastSave({ customStyle, disabled, icon }: RUPresetProps) {
             role={`save button`}
             aria-label={`save`}
             className={`flex items-center justify-center
-                        min-w-[96px] min-h-[48px] px-4 py-2
+                        min-w-[126px] min-h-[48px] px-4 py-2
                         text-green-600 text-lg rounded-md 
                         mx-[8px] cursor-pointer
                         bg-white hover:bg-gray-100 active:bg-gray-200
