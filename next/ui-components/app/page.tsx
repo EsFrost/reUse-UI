@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center mt-7 w-full">
-        <ReUseButton title='Action' icon={<FaCheck />} />      
+
+        <ReUseButton title='Action' icon={<FaCheck />} /> 
         <ReUseCancel icon={true} />
         <ReUseSave icon={true} />
 
@@ -27,11 +28,11 @@ export default function Home() {
 
         <ReUseHighContrast title='Action' />
         <ReUseHighContrastCancel />
-        <ReUseHighContrastSave />
+        <ReUseHighContrastSave clickFunc={() => console.log('test')} />
       </div>
 
       <div className="flex justify-center mt-7 w-full">
-      <ReUseTextField id='editable-div' getData={logData} title='Text field' />
+        <ReUseTextField id='editable-div' getData={logData} title='Text field' />
       </div>
     </>
   )

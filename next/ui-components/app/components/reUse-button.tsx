@@ -8,12 +8,14 @@ type RUButtonProps = {
     title: string
     icon?: JSX.Element
     disabled?: boolean
+    clickFunc?: () => void
 }
 
 type RUPresetProps = {
     customStyle?: string
     disabled?: boolean
     icon?: boolean
+    clickFunc?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const changeCase = (str: string) => {
@@ -193,12 +195,19 @@ function ReUseHighContrastCancel({ customStyle, disabled, icon }: RUPresetProps)
     )
 }
 
-function ReUseHighContrastSave({ customStyle, disabled, icon}: RUPresetProps) {
+function ReUseHighContrastSave({ customStyle, disabled, icon, clickFunc}: RUPresetProps) {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
         setIsClicked(true);
         setTimeout(() => setIsClicked(false), 500);
+    }
+
+    const handleFuncs = (event: React.MouseEvent<HTMLButtonElement>) => {
+        handleClick()
+        if (clickFunc) {
+            clickFunc(event)
+        }
     }
 
     return (
@@ -220,7 +229,7 @@ function ReUseHighContrastSave({ customStyle, disabled, icon}: RUPresetProps) {
                         ${isClicked ? 'pulse-once' : ''}
                         `}
             disabled={disabled}
-            onClick={handleClick}
+            onClick={handleFuncs}
         >
             SAVE{icon === true ? <span className='ml-2'><FaRegSave /></span> : ''}
         </button>
