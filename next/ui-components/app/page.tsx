@@ -1,5 +1,5 @@
 'use client'
-import ReUseButton, { ReUseCancel, ReUseSave, ReUseHighContrast, ReUseHighContrastCancel } from "./components/reUse-button"
+import ReUseButton, { ReUseCancel, ReUseSave, ReUseHighContrast, ReUseHighContrastCancel, ReUseHighContrastSave } from "./components/reUse-button"
 import { FaCheck } from "react-icons/fa"
 import ReUseTextField from "./components/reUse-texeField"
 
@@ -22,9 +22,12 @@ export default function Home() {
 
       <div className="flex justify-center mt-7 w-full">
         <ReUseHighContrast title='Action' icon={<FaCheck />} />
-        <ReUseHighContrast title='Action' />
         <ReUseHighContrastCancel icon={true} />
+        <ReUseHighContrastSave icon={true} />
+
+        <ReUseHighContrast title='Action' />
         <ReUseHighContrastCancel />
+        <ReUseHighContrastSave />
       </div>
 
       <div className="flex justify-center mt-7 w-full">
